@@ -1,10 +1,15 @@
 import React from 'react';
-import Header from '../components/Header';
+import Navbar from '../components/NavBar';
+import { Link } from 'react-router-dom';
+import EventHistory from '../pages/EventHistory'
 
 function EventPage() {
     return (
         <div className="min-h-screen bg-white-100">
+            {/* Navbar */}
+            <Navbar />
 
+            {/* Contenido principal */}
             <section className="container mx-auto text-center py-16">
                 <h1 className="text-4xl font-bold mb-6">Gestión de Eventos</h1>
 
@@ -19,6 +24,11 @@ function EventPage() {
                     <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg shadow-md">
                         Eliminar evento
                     </button>
+                    <Link to="historyEvent">
+                        <button className="bg-green-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg shadow-md">
+                            Historial de eventos
+                        </button>
+                    </Link>
                 </div>
             </section>
         </div>

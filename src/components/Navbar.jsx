@@ -7,18 +7,14 @@ const Navbar = () => {
     return (
         <nav className="bg-white shadow-md sticky top-0 z-50">
             <div className="w-full flex justify-between items-center p-4">
-                {/* Logo y Nombre */}
-                <div className="flex items-center space-x-2">
-                    <Link to="/" className="text-3xl font-extrabold tracking-wide font-serif">
-                        <span className="text-blue-600">Arquitectura</span>
-                        <span> Clean </span>
-                    </Link>
+                {/* Título o información sobre la gestión */}
+                <div className="flex items-center">
+                    <h1 className="text-2xl font-bold text-blue-600">Arquitectura Clean</h1>
                 </div>
 
                 {/* Links para pantallas grandes */}
                 <div className="hidden md:flex space-x-4">
                     <Link to="/" className="block px-4 py-2 text-gray-700 hover:text-blue-600 transition text-lg font-medium">Inicio</Link>
-
                 </div>
 
                 {/* Botón de menú para pantallas medianas y chicas */}
@@ -35,6 +31,9 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden bg-white shadow-md">
                     <Link to="/" className="block px-4 py-2 text-gray-700 hover:text-blue-600 transition text-lg font-medium">Inicio</Link>
+                    <Link to="/events" className="block px-4 py-2 text-gray-700 hover:text-blue-600 transition text-lg font-medium">Eventos</Link>
+                    <Link to="/sculptors" className="block px-4 py-2 text-gray-700 hover:text-blue-600 transition text-lg font-medium">Escultores</Link>
+                    <Link to="/reports" className="block px-4 py-2 text-gray-700 hover:text-blue-600 transition text-lg font-medium">Reportes</Link>
                 </div>
             )}
         </nav>
