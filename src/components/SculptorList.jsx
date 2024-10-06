@@ -38,7 +38,9 @@ const SculptorList = () => {
           <p className="text-gray-600 text-center">No hay escultores disponibles</p>
         )}
       </ul>
+      
     </div>
+    
   );
 };
 
