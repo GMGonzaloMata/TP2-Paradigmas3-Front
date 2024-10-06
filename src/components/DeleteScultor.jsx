@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Importamos Link para la navegación
 
 const DeleteScultor = () => {
-  const [eventName, setEventName] = useState('');
+  const [eventName, setEventName] = useState("");
   const [message, setMessage] = useState('');
 
   // Función para manejar los cambios en el input
@@ -14,19 +14,18 @@ const DeleteScultor = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/sculptors/delete', {
+      const response = await fetch('http://localhost:3000/sculptors', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ name: eventName }), // El backend espera "name" como el nombre del escultor
       });
-
       if (response.ok) {
-        setMessage('Escultor eliminado con éxito');
+        alert('Escultor eliminado con éxito');
         setEventName(''); // Limpiar el input
       } else if (response.status === 404) {
-        setMessage('Escultor no encontrado');
+        setMessage('Escultor eliminado');
       } else {
         setMessage('Error al eliminar el Escultor');
       }
