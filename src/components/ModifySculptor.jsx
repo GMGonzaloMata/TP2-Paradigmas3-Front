@@ -20,7 +20,7 @@ const ModifySculptor = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/sculptors', {
+      const response = await fetch('https://tp2-paradigmas3-back.onrender.com/sculptors', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

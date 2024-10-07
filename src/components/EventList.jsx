@@ -7,7 +7,7 @@ const EventList = () => {
   // Función para cargar todos los eventos
   const loadAllEvents = async () => {
     try {
-      const response = await fetch('http://localhost:3000/events/all');
+      const response = await fetch('https://tp2-paradigmas3-back.onrender.com/events/all');
       const data = await response.json();
       setEvents(data);
     } catch (error) {
@@ -18,7 +18,7 @@ const EventList = () => {
   // Función para cargar eventos futuros
   const loadFutureEvents = async () => {
     try {
-      const response = await fetch('http://localhost:3000/events/future');
+      const response = await fetch('https://tp2-paradigmas3-back.onrender.com/events/future');
       const data = await response.json();
       setEvents(data);
       setIsFuture(true);
@@ -30,7 +30,7 @@ const EventList = () => {
   // Función para cargar eventos pasados
   const loadPastEvents = async () => {
     try {
-      const response = await fetch('http://localhost:3000/events/past');
+      const response = await fetch('https://tp2-paradigmas3-back.onrender.com/events/past');
       const data = await response.json();
       setEvents(data);
       setIsFuture(false);

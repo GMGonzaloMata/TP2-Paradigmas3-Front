@@ -14,7 +14,7 @@ const DeleteEvent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/events', {
+      const response = await fetch('https://tp2-paradigmas3-back.onrender.com/events', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

@@ -34,7 +34,7 @@ const FormAddEvent = () => {
       // Sumar un día a la fecha seleccionada
       const adjustedDate = addOneDay(date);
 
-      const response = await fetch('http://localhost:3000/events', {
+      const response = await fetch('https://tp2-paradigmas3-back.onrender.com/events', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
