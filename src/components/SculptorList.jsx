@@ -6,7 +6,7 @@ const SculptorList = () => {
   // Función para cargar todos los escultores
   const loadAllSculptors = async () => {
     try {
-      const response = await fetch('http://localhost:3000/sculptors');
+      const response = await fetch('https://tp2-paradigmas3-back.onrender.com/sculptors');
       const data = await response.json();
       setSculptors(data);
     } catch (error) {

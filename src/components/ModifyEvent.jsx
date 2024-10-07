@@ -32,7 +32,7 @@ const ModifyEvent = () => {
         updatedValue = addOneDay(newValue);
       }
 
-      const response = await fetch('http://localhost:3000/events', {
+      const response = await fetch('https://tp2-paradigmas3-back.onrender.com/events', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
