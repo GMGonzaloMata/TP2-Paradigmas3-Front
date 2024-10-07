@@ -19,7 +19,7 @@ const Home = () => {
 
                 {/* Sección de gestión (Texto a la izquierda) */}
                 <div className="text-left text-white lg:w-1/2 px-4"> {/* Alineado a la izquierda */}
-                    <h1 className="text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Te ofecemos que puedas gestionar tus eventos y escultores.</h1>
+                    <h1 className="text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Te ofrecemos que puedas gestionar tus eventos y escultores.</h1>
                     <p className="text-lg font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
                         Creamos esta plataforma basandones en la Arquitectura Clean.
                     </p>
