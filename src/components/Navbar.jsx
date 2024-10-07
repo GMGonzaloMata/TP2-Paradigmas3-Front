@@ -16,7 +16,7 @@ const Navbar = () => {
 
                 {/* Botón de menú para pantallas medianas y chicas */}
                 <div className="md:hidden flex items-center">
-                    <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
+                    <button onClick={() => setIsOpen(!isOpen)} className="text-black focus:outline-none"> {/* Cambié `text-white` a `text-black` */}
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg>
@@ -24,9 +24,10 @@ const Navbar = () => {
                 </div>
             </div>
 
+            {/* Menú desplegable para pantallas chicas */}
             {isOpen && (
-                <div className="md:hidden bg-transparent shadow-md">
-                    <Link to="/" className="block px-4 py-2 text-white hover:text-blue-600 transition text-lg font-medium">Inicio</Link>
+                <div className="md:hidden bg-black shadow-md"> {/* Cambié `bg-transparent` a `bg-black` */}
+                    <Link to="/" className="block px-4 py-2 text-white hover:text-blue-600 transition text-lg font-medium">Inicio</Link> {/* Texto blanco por defecto */}
                 </div>
             )}
         </nav>
