@@ -26,7 +26,7 @@ const Footer = () => {
                 <div>
                     <img src={bronny} alt="Santiago Guglielmone" className="mx-auto mt-2 w-16 h-16 rounded-full" />
                     <h3 className="font-bold text-lg">Santiago Guglielmone</h3>
-                    <p className="text-sm">...</p>
+                    <p className="text-sm">guglielmonesantiago69@gmail.com</p>
                 </div>
 
                 {/* Columna 4 con la imagen */}

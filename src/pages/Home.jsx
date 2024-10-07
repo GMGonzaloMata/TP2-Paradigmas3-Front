@@ -5,6 +5,7 @@ import fondo from '../assets/fondoo.webp';
 import miVideo from '../assets/arquitecturaclean.mp4';
 
 const Home = () => {
+
     return (
         <div
             className="min-h-screen flex flex-col justify-between"
