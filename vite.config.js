@@ -9,9 +9,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Mi Aplicación PWA',
-        short_name: 'MiApp',
-        description: 'Una descripción de la app PWA',
+        name: 'La cabra App',
+        short_name: 'cabra',
+        description: 'Team Cabra MVP',
         theme_color: '#ffffff',
         icons: [
           {

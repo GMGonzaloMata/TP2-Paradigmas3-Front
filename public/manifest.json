@@ -1,6 +1,6 @@
 {
-    "short_name": "MiApp",
-    "name": "Mi Aplicación PWA",
+    "short_name": "cabra",
+    "name": "La cabra App",
     "icons": [
       {
         "src": "./icons/android-chrome-192x192.png",
