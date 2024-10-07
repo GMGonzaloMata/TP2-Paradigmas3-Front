@@ -39,13 +39,16 @@ const FormAddSculptor = () => {
           contact: '',
           works: '',
         });
-      } else {
-        alert('Error al crear el escultor');
-      }
-    } catch (error) {
-      console.error('Error al crear el escultor:', error);
+
+    } else if (response.status === 400) {
+      alert('Ya existe un escultor con este nombre.');
+    } else {
+      alert('Error al crear el escultor.');
     }
-  };
+  } catch (error) {
+    console.error('Error al crear el escultor:', error);
+  }
+};
 
   return (
     <div className="container mx-auto my-8 p-4 bg-white shadow-md rounded-lg">

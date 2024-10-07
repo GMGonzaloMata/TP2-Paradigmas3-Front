@@ -1,15 +1,16 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 function EventPage() {
     return (
-        <div className="min-h-screen bg-white-100">
+        <div className="flex flex-col min-h-screen bg-white-100">
             {/* Navbar */}
             <Navbar />
 
             {/* Contenido principal */}
-            <section className="container mx-auto text-center py-16">
+            <section className="container mx-auto text-center py-16 flex-grow">
                 <h1 className="text-4xl font-bold mb-6">Gestión de Eventos</h1>
 
                 {/* Botones para gestionar eventos */}
@@ -20,13 +21,15 @@ function EventPage() {
                             Agregar Nuevo Evento
                         </button>
                     </Link>
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md">
-                        Modificar evento
-                    </button>
+                    <Link to="/modify-event">
+                        <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md">
+                            Modificar evento
+                        </button>
+                    </Link>
                     <Link to="/delete-event">
-                    <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg shadow-md">
-                        Eliminar evento
-                    </button>
+                        <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg shadow-md">
+                            Eliminar evento
+                        </button>
                     </Link>
                     <Link to="/event-list">
                         <button className="bg-green-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg shadow-md">
@@ -35,6 +38,9 @@ function EventPage() {
                     </Link>
                 </div>
             </section>
+
+            {/* Footer */}
+            <Footer />
         </div>
     );
 }

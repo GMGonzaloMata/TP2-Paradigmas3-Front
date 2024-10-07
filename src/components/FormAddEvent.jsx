@@ -18,16 +18,28 @@ const FormAddEvent = () => {
     });
   };
 
+  // Función para sumar un día a la fecha
+  const addOneDay = (date) => {
+    const newDate = new Date(date);
+    newDate.setDate(newDate.getDate() + 1); // Sumar un día
+    return newDate.toISOString().split('T')[0]; // Retorna solo la parte de la fecha
+  };
+
   // Función para enviar los datos al backend y crear un nuevo evento
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const { date, ...restData } = eventData;
+      
+      // Sumar un día a la fecha seleccionada
+      const adjustedDate = addOneDay(date);
+
       const response = await fetch('http://localhost:3000/events', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(eventData),
+        body: JSON.stringify({ ...restData, date: adjustedDate }),
       });
 
       if (response.ok) {
@@ -39,13 +51,15 @@ const FormAddEvent = () => {
           description: '',
           theme: '',
         });
+      } else if (response.status === 400) {
+        alert('Ya existe un evento con esa temática');
       } else {
         alert('Error al crear el evento');
       }
     } catch (error) {
       console.error('Error al crear el evento:', error);
     }
-  };
+}
 
   return (
     <div className="container mx-auto my-8 p-4 bg-white shadow-md rounded-lg">
