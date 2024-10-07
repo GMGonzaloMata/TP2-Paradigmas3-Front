@@ -7,7 +7,10 @@ import SculptorPage from './pages/SculptorPage';
 import AddEventPage from './pages/AddEventPage';
 import AddSculptorPage from './pages/AddSculptorPage';
 import SculptorListPage from './pages/SculptorListPage';
-import DeleteEventPage from './pages/DeleteEventPage'; // Importa la nueva página
+import DeleteEventPage from './pages/DeleteEventPage';
+import ModifyEventPage from './pages/ModifyEventPage';
+import DeleteSculptorPage from './pages/DeleteSculptorPage';
+import ModifySculptorPage from './pages/ModifySculptorPage'; 
 
 const App = () => {
   return (
@@ -20,7 +23,10 @@ const App = () => {
         <Route path="/event-list" element={<EventList />}/>
         <Route path="/add-sculptor" element={<AddSculptorPage />} />
         <Route path="/sculptor-list" element={<SculptorListPage />} />
-        <Route path="/delete-event" element={<DeleteEventPage />} /> {/* Nueva ruta */}
+        <Route path="/delete-event" element={<DeleteEventPage />} />
+        <Route path="/modify-event" element={<ModifyEventPage />} />
+        <Route path="/delete-sculptor" element={<DeleteSculptorPage />} />
+        <Route path="/modify-sculptor" element={<ModifySculptorPage />} />
       </Routes>
     </Router>
   );

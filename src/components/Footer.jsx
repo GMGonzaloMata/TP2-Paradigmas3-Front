@@ -14,7 +14,7 @@ const Footer = () => {
                 {/* Columna 2 */}
                 <div>
                     <h3 className="font-bold text-lg">Gonzalo Mata</h3>
-                    <p className="text-sm">...</p>
+                    <p className="text-sm">gonza.mata2003@gmail.com</p>
                 </div>
 
                 {/* Columna 3 */}
@@ -26,7 +26,7 @@ const Footer = () => {
                 {/* Columna 4 */}
                 <div>
                     <h3 className="font-bold text-lg">Ignacio Parra</h3>
-                    <p className="text-sm">...</p>
+                    <p className="text-sm">lacabra@gmail.com</p>
                 </div>
             </div>
 
