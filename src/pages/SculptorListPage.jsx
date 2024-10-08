@@ -11,7 +11,7 @@ const SculptorListPage = () => {
       className="min-h-screen flex flex-col justify-between"
       style={{ backgroundImage: `url(${fondo})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      <div className="min-h-screen bg-gray-100 flex flex-col justify-between">
+      <div className="min-h-screen  flex flex-col justify-between">
         {/* Navbar */}
         <Navbar />
 
